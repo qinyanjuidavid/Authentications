@@ -1,4 +1,8 @@
+import 'package:auth_app/pages/login_screen2.dart';
+import 'package:auth_app/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
+// import 'pages/login_screen1.dart';
+import './pages/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,36 +19,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Material App",
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      title: "Login Demo",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: LoginPage(),
     );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
-
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
-
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }
